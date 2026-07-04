@@ -8,7 +8,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
-type Attempt = dict[str, Any]
+Attempt = dict[str, Any]
 
 DEFAULT_DATA_DIR = "/Users/yanetodales/Documents/esame medicina interna/data"
 

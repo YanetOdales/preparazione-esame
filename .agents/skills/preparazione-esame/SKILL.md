@@ -46,7 +46,7 @@ Ogni sessione parte da un **caso clinico**, non da un singolo argomento.
 Quando l’utente chiede di studiare, fare pratica o simulare l’esame, esegui dalla root della skill:
 
 ```bash
-uv run scripts/select_case.py
+uv run --python 3.12 scripts/select_case.py
 ```
 
 Leggi l’output JSON:
@@ -85,6 +85,8 @@ Quando lo studente conferma, genera un caso realistico coerente con:
 * `section`
 * `case_title`
 * `objectives`
+
+Gli obiettivi non sono una lista di controllo. Sono i concetti che l’incontro clinico dovrebbe affrontare in modo naturale. Genera un’evoluzione clinica coerente e realistica in cui tali concetti emergano organicamente durante l’anamnesi, gli accertamenti, le complicanze o la gestione. Evita di forzare ogni obiettivo nella presentazione iniziale. Il paziente dovrebbe evolversi con il progredire delle domande, proprio come in un vero esame orale.
 
 Il caso deve contenere solo le informazioni iniziali necessarie, come in un esame orale o scritto:
 
@@ -180,7 +182,7 @@ Il feedback deve essere clinico, chiaro, profondo e orientato all’esame. Quand
 Al termine, esegui:
 
 ```bash
-uv run scripts/update_history.py \
+uv run --python 3.12 scripts/update_history.py \
   --case-code "<Case ID>" \
   --correct <Correct answers> \
   --total <Total questions> \
@@ -190,7 +192,7 @@ uv run scripts/update_history.py \
 Se non ci sono errori:
 
 ```bash
-uv run scripts/update_history.py \
+uv run --python 3.12 scripts/update_history.py \
   --case-code "<Case ID>" \
   --correct <Correct answers> \
   --total <Total questions> \

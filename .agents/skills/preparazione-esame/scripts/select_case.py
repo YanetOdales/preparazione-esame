@@ -9,17 +9,16 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-type Case = dict[str, Any]
-type Cases = dict[str, Case]
-type Scores = dict[str, list[int]]
+Case = dict[str, Any]
+Cases = dict[str, Case]
+Scores = dict[str, list[int]]
 
 DEFAULT_DATA_DIR = "/Users/yanetodales/Documents/esame medicina interna/data"
 
 REASONS = {
     "unattempted": "This case has not been attempted yet.",
-    "weak": "This case is among the weakest recent attempts.",
+    "weighted": "This case was selected with probability weighted by your last score.",
 }
-
 
 def read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
@@ -56,19 +55,23 @@ def pick_unattempted_case(cases: Cases, scores: Scores) -> tuple[str, str]:
     return case_id, REASONS["unattempted"]
 
 
-def pick_weak_case(cases: Cases, scores: Scores) -> tuple[str, str]:
-    ranked = sorted(
-        (case_scores[-1], random.random(), case_id)
-        for case_id, case_scores in scores.items()
-        if case_id in cases
-    )
+def case_weight(last_score: int) -> float:
+    return (11 - last_score) ** 2
 
-    _, _, case_id = random.choice(ranked[: min(5, len(ranked))])
-    return case_id, REASONS["weak"]
+
+def pick_weighted_case(cases: Cases, scores: Scores) -> tuple[str, str]:
+    case_ids = list(cases)
+
+    weights = [
+        case_weight(scores[case_id][-1])
+        for case_id in case_ids
+    ]
+
+    return random.choices(case_ids, weights=weights, k=1)[0], REASONS["weighted"]
 
 
 def select_case(cases: Cases, scores: Scores) -> dict[str, Any]:
-    picker = pick_unattempted_case if set(cases) - set(scores) else pick_weak_case
+    picker = pick_unattempted_case if set(cases) - set(scores) else pick_weighted_case
     case_id, reason = picker(cases, scores)
     case = cases[case_id]
 
