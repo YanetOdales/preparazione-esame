@@ -1,0 +1,568 @@
+title = "SS Medicina Interna - Programma 2026"
+source = "Programma esame medicina interna.pdf"
+
+[[cases]]
+number = 1
+section = "Epatologia"
+title = "Painless jaundice and itching"
+objectives = [
+  "Metabolismo della bilirubina",
+  "Diagnosi differenziale degli itteri",
+  "Ittero colestatico postepatico",
+  "Carcinoma del pancreas",
+  "Calcolosi delle vie biliari",
+  "Cirrosi biliare primitiva",
+  "Colangite sclerosante primitiva",
+  "Ittero pre-epatico",
+  "Emolisi",
+  "Sindrome di Gilbert",
+]
+
+[[cases]]
+number = 2
+section = "Epatologia"
+title = "Jaundice in an acutely ill patients"
+objectives = [
+  "Colangite",
+  "Diagnosi differenziale delle epatiti acute",
+  "Sierologia delle epatiti virali",
+  "Terapia delle epatiti virali",
+  "Mononucleosi infettiva",
+  "Epatiti da farmaci",
+  "Insufficienza epatica acuta",
+  "Fattori scatenanti, diagnosi e terapia dell'encefalopatia epatica",
+]
+
+[[cases]]
+number = 3
+section = "Epatologia"
+title = "Abnormal liver enzyme"
+objectives = [
+  "Prove di funzionalità epatica",
+  "Diagnosi differenziale dell'aumento asintomatico delle transaminasi",
+  "Steatosi epatica non alcolica",
+  "Trattamento della sindrome metabolica",
+  "Epatopatia alcolica",
+  "Diagnosi differenziale delle epatiti croniche",
+  "Epatite autoimmune",
+  "Emocromatosi",
+  "Malattia di Wilson",
+]
+
+[[cases]]
+number = 4
+section = "Epatologia"
+title = "Abdominal swelling"
+objectives = [
+  "Ascite: diagnosi differenziale",
+  "Cirrosi epatica: cause, fisiopatologia, quadro clinico, diagnosi e complicanze",
+  "Ipertensione portale",
+  "Iperaldosteronismo secondario nelle sindromi edemigene",
+  "Cirrosi compensata e compensata, stadiazione Child-Pugh e MELD",
+  "Principi di terapia dell'ascite e delle altre complicanze",
+  "Cause precipitanti dell'encefalopatia epatica",
+  "Indicazioni al trapianto di fegato",
+]
+
+[[cases]]
+number = 5
+section = "Endocrinologia"
+title = "Unintentional weight loss in a women with tachycardia and fine tremor"
+objectives = [
+  "Riconoscere l'ipertiroidismo",
+  "Diagnosi differenziale delle cause di ipertiroidismo",
+  "Principi di terapia dell'ipertiroidismo",
+  "Riconoscere l'ipotiroidismo",
+  "Terapia sostitutiva con ormone tiroideo",
+  "Riconoscere la tiroidite subacuta",
+  "Diagnosi differenziale dei noduli tiroidei",
+  "Test di laboratorio e strumentali di funzionalità tiroidea",
+]
+
+[[cases]]
+number = 6
+section = "Endocrinologia"
+title = "Postural hypotension and unintentional weight loss in a women with hypothyroidism"
+objectives = [
+  "Diagnosi differenziale delle iperprolattinemie",
+  "Riconoscere l'ipotiroidismo primario e quello secondario ad insufficienza ipofisaria",
+  "Principi di terapia delle iperprolattinemie",
+  "Adenomi ipofisari",
+  "Sindrome di Cushing",
+  "Diabete insipido",
+  "Ipopituitarismo",
+  "Sindrome dell'ovaio policistico",
+]
+
+[[cases]]
+number = 7
+section = "Endocrinologia"
+title = "Hyperprolactinemia in a woman with menstrual irregularity"
+objectives = [
+  "Diagnosi differenziale delle iperprolattinemie",
+  "Riconoscere l'ipotiroidismo primario e quello secondario ad insufficienza ipofisaria",
+  "Principi di terapia delle iperprolattinemie",
+  "Adenomi ipofisari",
+  "Sindrome di Cushing",
+  "Diabete insipido",
+  "Ipopituitarismo",
+  "Sindrome dell'ovaio policistico",
+]
+
+[[cases]]
+number = 8
+section = "Endocrinologia"
+title = "Glucose control at home"
+objectives = [
+  "Epidemiologia del diabete di tipo 2",
+  "Fisiopatologia del diabete di tipo 1 e di tipo 2",
+  "Diagnosi di diabete mellito",
+  "Meccanismo di azione degli antidiabetici orali",
+  "Terapia insulinica, con particolare attenzione al 'basal-bolus'",
+  "Obiettivi della terapia antidiabetica",
+  "Prevenzione del diabete di tipo 2 attraverso il trattamento della sindrome metabolica",
+  "Complicanze croniche macroangiopatiche e microangiopatiche del diabete",
+  "Diagnosi e terapia della retinopatia diabetica",
+  "Valutazione dell'albuminuria",
+  "Polineuropatia diabetica",
+  "Neuropatia autonomica",
+  "Piede diabetico",
+]
+
+[[cases]]
+number = 9
+section = "Endocrinologia"
+title = "Glucose control in the hospital"
+objectives = [
+  "Iperglicemia nella malattia acuta",
+  "Riconoscimento e prevenzione dell'ipoglicemia nel diabete mellito",
+  "Terapia dell'ipoglicemia",
+  "Diagnosi differenziale dell'ipoglicemia nel paziente non-diabetico",
+  "Complicanze acute del diabete",
+  "Chetoacidosi",
+  "Coma iperosmolare",
+  "Riconoscere i disturbi dell'equilibrio acido-base",
+  "Diagnosi differenziale delle acidosi metaboliche",
+  "Gap anionico",
+  "Chetoacidosi e acidosi lattica",
+  "Identificare e gestire la sindrome da rialimentazione nelle anoressie e nell'alcolismo",
+]
+
+[[cases]]
+number = 10
+section = "Ematologia"
+title = "Increasing fatigue and conjunctival pallor"
+objectives = [
+  "Diagnosi differenziale delle anemie in base al volume eritrocitario ed al numero di reticolociti",
+  "Identificazione dell'anemia sideropenica",
+  "Cause di sanguinamento cronico",
+  "Identificare l'emorragia acuta",
+  "Indicazioni all'emotrasfusione nelle emorragie acute e croniche e nei pazienti con comorbidità cardiovascolari",
+  "Principi di terapia marziale orale e endovenosa",
+  "Riconoscere e trattare l'anemia macrocitica, identificare il deficit di B12",
+  "Identificare le talassemie e l'anemia a cellule falciformi",
+  "Identificare le anemie emolitiche",
+  "Metabolismo del ferro: sideremia, transferrina, ferritina, calcolo della saturazione della transferrina, epcidina",
+  "Sindromi da sovraccarico marziale",
+]
+
+[[cases]]
+number = 11
+section = "Nefrologia"
+title = "Stage IV Chronic Kidney Disease in a patient with type 2 diabetes"
+objectives = [
+  "Riconoscere la malattia renale cronica (CKD) e le sue complicanze nei suoi vari stadi di gravità",
+  "Diagnosi differenziale delle cause di CKD",
+  "Principi di trattamento per rallentare la progressione della CKD e controllarne le complicanze",
+  "Indicazioni al trattamento dialitico",
+]
+
+[[cases]]
+number = 12
+section = "Nefrologia"
+title = "Edema and increased body weight in a patients with type 2 diabetes"
+objectives = [
+  "Riconoscere la sindrome nefrosica",
+  "Diagnosi differenziale delle cause di sindrome nefrosica",
+  "Principi di terapia",
+]
+
+[[cases]]
+number = 13
+section = "Nefrologia"
+title = "Acute kidney injury after coronary angiography"
+objectives = [
+  "Riconoscere la malattia renale acuta (AKI)",
+  "Controllo dei fattori di rischio",
+  "Diagnosi differenziale delle forme pre-renali, parenchimali e post-renali",
+  "Principi di terapia",
+  "Indicazioni al trattamento dialitico",
+  "Terapia diuretica nello scompenso cardiaco e insufficienza renale",
+  "Sindromi cardio-renali",
+]
+
+[[cases]]
+number = 14
+section = "Nefrologia"
+title = "Macroscopic hematuria with edema"
+objectives = [
+  "Riconoscere la sindrome nefritica secondaria a glomerulonefrite",
+  "Riconoscere l'ematuria glomerulare",
+  "Diagnosi differenziale delle ematurie",
+  "Diagnosi differenziale del dolore addominale di tipo colico",
+  "Principi di terapia medica nella nefrolitiasi",
+]
+
+[[cases]]
+number = 15
+section = "Endocrinologia"
+title = "Pathological fracture in a patient with dehydration and hypercalcemia"
+objectives = [
+  "Conoscere le cause di ipercalcemia",
+  "Riconoscere il mieloma multiplo differenziandolo dalla gammopatia monoclonale di significato incerto (MGUS)",
+  "Terapia dell'ipercalcemia neoplastica",
+  "Amiloidosi primaria e secondaria",
+  "Conoscere i fattori di rischio ed i criteri diagnostici di osteoporosi",
+  "Riconoscere e trattare l'iperparatiroidismo primario",
+  "Ipocalcemie",
+  "Conoscere il metabolismo fosfo-calcico",
+  "Meccanismi di azione dei farmaci per l'osteoporosi",
+  "Identificare il deficit di vitamina D",
+  "Malattia di Paget",
+]
+
+[[cases]]
+number = 16
+section = "Cardiologia"
+title = "ECG in a patient with palpitations"
+objectives = [
+  "Apprendere un approccio sistematico all'interpretazione dell'ECG",
+  "Riconoscere i principali quadri elettrocardiografici in relazione alle manifestazioni cliniche",
+  "Iperpotassiemia",
+  "Ipopotassiemia",
+]
+
+[[cases]]
+number = 17
+section = "Cardiologia"
+title = "Syncope in a patient with bradicardia"
+objectives = [
+  "Conoscere la sincope cardiogena (associata ad aritmie o anomalie strutturali miocardiche) e neurogena (vasovagale ed ortostatica)",
+  "Arresto cardiorespiratorio associato ad anomalie strutturali miocardiche (per es. infarto miocardico acuto) o associato ad un miocardio apparentemente normale",
+  "Riconoscere e monitorizzare la progressione della stenosi aortica",
+]
+
+[[cases]]
+number = 18
+section = "Cardiologia"
+title = "Palpitations and shortness of breath"
+objectives = [
+  "Riconoscere le valvulopatie mitraliche e gli esiti della malattia reumatica",
+  "Riconoscere la fibrillazione atriale",
+  "Obiettivi della terapia della fibrillazione atriale",
+  "Principi della terapia anticoagulante orale",
+]
+
+[[cases]]
+number = 19
+section = "Cardiologia"
+title = "Fever with new murmur"
+objectives = [
+  "Riconoscere le manifestazioni cliniche di cardiopatia ischemica",
+  "Diagnosi di angina stabile",
+  "Principi di terapia dell'angina stabile: farmaci che rallentano la progressione e farmaci sintomatici",
+]
+
+[[cases]]
+number = 20
+section = "Cardiologia"
+title = "Exercise-induced chest pain rapidly relieved by rest"
+objectives = [
+  "Riconoscere le manifestazioni cliniche di cardiopatia ischemica",
+  "Diagnosi di angina stabile",
+  "Principi di terapia dell'angina stabile: farmaci che rallentano la progressione e farmaci sintomatici",
+]
+
+[[cases]]
+number = 21
+section = "Cardiologia"
+title = "Control of cholesterol levels in primary and secondary prevention"
+objectives = [
+  "Ipercolesterolemia familiare",
+  "Meccanismi di ipercolesterolemia nella prevenzione primaria e secondaria delle complicanze cardiovascolari",
+  "Meccanismo d'azione dei farmaci ipocolesterolemizzanti: statine, ezetimibe, inibitori di PCSK9",
+  "Complicanze della terapia con statine",
+]
+
+[[cases]]
+number = 22
+section = "Cardiologia"
+title = "Chest pain and diaphoresis"
+objectives = [
+  "Riconoscere la sindrome coronarica acuta",
+  "Diagnosi differenziale di STEMI e non-STEMI",
+  "Principi di terapia e follow up dell'infarto del miocardio",
+  "Riconoscere le complicanze dell'infarto miocardico",
+  "Diagnosi differenziale del dolore toracico",
+  "Riconoscere la pericardite acuta e il tamponamento cardiaco",
+]
+
+[[cases]]
+number = 23
+section = "Cardiologia"
+title = "Breathlessness on exertion"
+objectives = [
+  "Riconoscere lo scompenso cardiaco a frazione di eiezione ridotta o conservata",
+  "Riconoscere le cause di scompenso cardiaco",
+  "Meccanismi di compenso cardiaco cronico e acuto",
+  "Meccanismi di compenso che accelerano la progressione e farmaci sintomatici",
+  "Riconoscere lo scompenso cardiaco acuto",
+  "Diagnosi differenziale dell'edema polmonare",
+  "Terapia dell'edema polmonare",
+]
+
+[[cases]]
+number = 24
+section = "Cardiologia"
+title = "Hypertension resistant to pharmacological therapy"
+objectives = [
+  "Ottimizzazione della terapia dell'ipertensione: farmaci di primo livello e farmaci di seconda linea",
+  "Monitorizzazione delle complicanze dell'ipertensione",
+  "Trattamento dell'ipertensione nell'ambito del controllo globale del rischio cardiovascolare",
+  "Cause dell'ipertensione resistente ai farmaci ipotensivi di prima linea (associazione di tre farmaci)",
+  "Riconoscere le ipertensioni secondarie endocrine e non endocrine",
+  "Iperaldosteronismo primario",
+  "Ipertensione nefrovascolare",
+  "Riconoscimento e principi di terapia delle crisi ipertensive",
+]
+
+[[cases]]
+number = 25
+section = "Reumatologia"
+title = "Polyarthritis and mild anemia"
+objectives = [
+  "Riconoscere le malattie reumatiche conoscendo la prevalenza delle varie forme cliniche",
+  "Diagnosi differenziale delle artriti",
+  "Riconoscere le manifestazioni extra-articolari delle malattie reumatiche",
+  "Diagnosi differenziale e sierologica delle malattie reumatiche",
+  "Diagnosi differenziale delle poliartriti",
+  "Conoscere i criteri diagnostici clinici e sierologici di artrite reumatoide",
+  "Principi di terapia con farmaci anti-infiammatori, immunosopressori e biologici",
+  "Riconoscere l'anemia associata alla fibrosi cronica",
+]
+
+[[cases]]
+number = 26
+section = "Reumatologia"
+title = "Right knee pain and stiffness in a seronegative patient"
+objectives = [
+  "Diagnosi differenziale delle monoartriti e delle oligoartriti sieronegative",
+  "Conoscere i fattori di rischio ed i principi di terapia dell'osteoartrite",
+  "Diagnosi e trattamento delle spondiloartriti",
+  "Riconoscere l'artrite enteropatica e artrite reattiva",
+  "Diagnosi, caratteristiche cliniche e terapia della malattia di Lyme",
+  "Diagnosi differenziale e terapia delle monoartriti acute: attacco di gotta, pseudo-gotta (deposizione di cristalli di pirofosfato di calcio), artrite settica",
+  "Fattori di rischio, storia naturale e terapia della gotta, iperuricemia asintomatica, sindrome da lisi tumorale",
+]
+
+[[cases]]
+number = 27
+section = "Reumatologia"
+title = "Chest pain with pancytopenia and arthritis"
+objectives = [
+  "Conoscere i criteri diagnostici clinici, strumentali e sierologici del lupus eritematosi sistemico",
+  "Ruolo delle indagini sierologiche nella diagnosi differenziale delle malattie immunomediate e del connettivo",
+  "Riconoscere il fenomeno di Reynaud",
+  "Riconoscere le manifestazioni cliniche e sierologiche della sindrome sistemica progressiva e della sindrome sicca",
+]
+
+[[cases]]
+number = 28
+section = "Reumatologia"
+title = "Recurrent sinusitis and dyspnea in a patient with microscopic haematuria"
+objectives = [
+  "Riconoscere le manifestazioni cliniche e sierologiche delle vasculiti",
+  "Vasculiti dei piccoli, medi e grandi vasi",
+  "Crioglobulinemie",
+  "Riconoscere l'arterite temporale nella diagnosi differenziale delle cefalee nell'anziano",
+  "Principi di terapia con farmaci glucocorticoidi",
+  "Prevenzione delle complicanze della terapia con glucocorticoidi",
+  "Rheumatologic emergencies",
+]
+
+[[cases]]
+number = 29
+section = "Pneumologia"
+title = "Sudden onset of dyspnea in with unilateral leg swelling"
+objectives = [
+  "Diagnosi differenziale delle cause di edema agli arti inferiori",
+  "Riconoscere la trombosi venosa profonda (TVP)",
+  "Diagnosi differenziale della dispnea acuta",
+  "Riconoscere l'embolia polmonare (EP)",
+  "Principi di terapia a profilassi della TVP e della EP",
+  "Principi di diagnosi differenziale delle trombofilie congenite ed acquisite",
+]
+
+[[cases]]
+number = 30
+section = "Pneumologia"
+title = "Fever, productive cough and confusion"
+objectives = [
+  "Diagnosi di polmonite",
+  "Definire il setting di cura delle polmoniti in base alla definizione dei livelli di gravità clinica (CURB-65, SOFA e qSOFA)",
+  "Principi di terapia antibiotica empirica della polmonite acquisita in comunità",
+  "Definizione di sepsi come infezione associata a complicanze d'organo mediate da una risposta immunitaria (2021)",
+  "Riconoscere le complicanze della polmonite",
+  "Riconoscere la sepsi e lo shock settico come complicanze della polmonite",
+  "Definizione di sepsi come infezione associata a complicanze d'organo mediate da una risposta immunitaria",
+  "Conoscere le complicanze della polmonite",
+]
+
+[[cases]]
+number = 31
+section = "Pneumologia"
+title = "Chronic non-productive cough"
+objectives = [
+  "Diagnosi differenziale della tosse cronica",
+  "Riconoscere l'asma bronchiale in base all'anamnesi, esame obiettivo ed indagini strumentali",
+  "Principi di terapia dell'asma cronica e dell'asma acuta",
+  "Indicatori di gravità dell'asma acuto",
+  "Meccanismi di azione dei farmaci broncodilatatori",
+  "Riconoscere la sarcoidosi",
+  "Malattie polmonari interstiziali",
+]
+
+[[cases]]
+number = 32
+section = "Pneumologia"
+title = "Worsening dyspnea and productive cough in a smoker"
+objectives = [
+  "Riconoscere la bronchite cronica ostruttiva (BPCO) in base all'anamnesi, esame obiettivo ed indagini strumentali",
+  "Principi di fisiopatologia dell'insufficienza respiratoria",
+  "Spirometria: pattern ostruttivi e restrittivi",
+  "Distinguere i diversi pattern clinici di BPCO",
+  "Riconoscere gli stadi di gravità della BPCO",
+  "Monitorizzare la progressione della BPCO",
+  "Complicanze della BPCO",
+  "Principi di terapia della BPCO nei suoi vari stadi di gravità",
+  "Terapia della BPCO riacutizzata",
+  "Indicazioni per l'ossigeno-terapia domiciliare",
+  "Riconoscere l'ipertensione polmonare ed il cuore polmonare cronico",
+]
+
+[[cases]]
+number = 33
+section = "Gastroenterologia"
+title = "Chronic diarrhea with weight loss and sideropenic anemia"
+objectives = [
+  "Diagnosi differenziale della diarrea cronica e delle sindromi da malassorbimento",
+  "Identificare le manifestazioni cliniche e sierologiche della celiachia dell'adulto",
+  "Ipersensibilità non celiaca al glutine",
+  "Identificare la sindrome da overgrowth batterico, la malattia di Whipple, la pancreatite cronica, la sindrome del colon irritabile",
+  "Identificare le manifestazioni cliniche e sierologiche del deficit di B12",
+  "Identificare e manifestazioni extraintestinali della malattia di Crohn e la rettocolite ulcerativa",
+  "Principi di terapia delle malattie infiammatorie croniche intestinali",
+]
+
+[[cases]]
+number = 34
+section = "Ematologia"
+title = "Epistaxis and purpura"
+objectives = [
+  "Identificare le sindromi emorragiche",
+  "Diagnosi differenziale delle piastrinopenie",
+  "Diagnosi differenziale della porpora",
+  "Riconoscere la porpora trombocitopenica autoimmune",
+  "Trombocitopenia indotta da eparina",
+  "Riconoscere le microangiopatie trombotiche",
+  "Deficit dei fattori della coagulazione",
+  "Identificare i difetti congeniti ed acquisiti della coagulazione",
+  "Riconoscere la coagulazione intravascolare disseminata",
+  "Indicazioni alla trasfusione piastrinica",
+]
+
+[[cases]]
+number = 35
+section = "Ematologia"
+title = "Splenomegaly"
+objectives = [
+  "Diagnosi differenziale delle splenomegalie",
+  "Ipersplenismo",
+  "Splenomegalia massiva: malaria, leishmaniosi, leucemia mieloide cronica, mielofibrosi, malattia di Gaucher",
+  "Modalità di presentazione clinica delle leucemie acute",
+  "Identificare le sindromi neutropeniche",
+  "Riconoscere le complicanze infettive della immunosoppressione da farmaci",
+  "Riconoscere le manifestazioni cliniche e le complicanze dell'Herpes Zoster",
+  "Infettivologia in paziente immunocompromesso",
+  "Riconoscere la sindrome dolorosa e l'eruzione eritemato-vescicolosa unilaterale secondaria all'herpes zoster",
+  "Linfocitosi",
+  "Identificare la leucemia linfocitica cronica",
+  "Identificare le sindromi mieloproliferative",
+  "Identificare le anemie da mielosclerosi e sindromi mielodisplastiche",
+]
+
+[[cases]]
+number = 36
+section = "Ematologia"
+title = "Cervical lymphadenopathy and cyclic fever"
+objectives = [
+  "Diagnosi differenziale delle linfoadenopatie",
+  "Identificare i linfomi di Hodgkin e non-Hodgkin",
+  "Mononucleosi infettiva ed altre patologie infettive che si possono manifestare con linfoadenopatia localizzata o generalizzata",
+]
+
+[[cases]]
+number = 37
+section = "Pneumologia"
+title = "Hemoptysis and weight loss in a smoker"
+objectives = [
+  "Diagnosi differenziale delle emottisi",
+  "Definizione di sindrome da calo ponderale involontario",
+  "Diagnosi differenziale della disfagia",
+  "Riconoscere il carcinoma polmonare",
+  "Riconoscere le principali sindromi paraneoplastiche",
+  "Riconoscere la sindrome da inappropriata secrezione di ADH",
+  "Diagnosi differenziale delle iponatriemie",
+  "Correzione dell'iponatriemia",
+  "Diagnosi differenziale delle ipernatriemie",
+  "Correzione delle ipernatriemie",
+  "Riconoscere l'infezione tubercolare e quella da HIV",
+]
+
+[[cases]]
+number = 38
+section = "Medicina Interna"
+title = "Fever of unknown origin"
+objectives = [
+  "Riconoscere ed impostare la diagnosi differenziale della febbre di origine sconosciuta",
+  "Differenziare le febbri di origine infettiva, reumatica e oncologica",
+]
+
+[[cases]]
+number = 39
+section = "Nutrizione e metabolismo"
+title = "Malnutrition in a patient with chronic alcoholism"
+objectives = [
+  "Identificare e gestire la sindrome da rialimentazione nelle anoressie e nell'alcolismo",
+  "Riconoscere i disturbi dell'equilibrio acido-base",
+  "Diagnosi differenziale delle acidosi metaboliche",
+  "Gap anionico",
+  "Chetoacidosi e acidosi lattica",
+]
+
+[[cases]]
+number = 40
+section = "Gastroenterologia"
+title = "Burning epigastric pain"
+objectives = [
+  "Identificare le cause e le manifestazioni cliniche della malattia peptica gastroduodenale",
+  "Diagnosi differenziale delle dispepsie",
+  "Principi di terapia eradicante l'Helicobacter pylori",
+  "Malattia da reflusso gastro-esofageo (GERD)",
+  "Carcinoma dello stomaco",
+  "Carcinoma esofageo",
+  "Diagnosi differenziale del dolore addominale",
+  "Identificare le cause, le manifestazioni cliniche e le complicanze della pancreatite acuta",
+  "Principi di terapia della pancreatite acuta",
+  "Carcinoide",
+]

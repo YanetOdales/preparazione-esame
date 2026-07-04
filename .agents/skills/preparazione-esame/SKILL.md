@@ -1,40 +1,38 @@
 ---
 name: preparazione-esame
-description: Simulatore adattivo in italiano per l'esame di Medicina Interna basato su casi clinici. Seleziona un caso dal programma, guida lo studente nel ragionamento diagnostico, somministra 10 domande progressive e salva i metadati della valutazione usando gli script dedicati.
-compatibility: Richiede Python 3 e la libreria PyYAML installata.
+description: Simulatore adattivo in italiano per l'esame di Medicina Interna basato su casi clinici. Seleziona un caso dal programma, guida lo studente nel ragionamento diagnostico, somministra domande progressive e salva i metadati della valutazione usando gli script dedicati.
+compatibility: Richiede uv
 ---
-```
 
 # Preparazione Esame Medicina Interna
 
 Questa skill prepara lo studente all’esame di Medicina Interna attraverso un **simulatore di caso clinico**.
+
 L’obiettivo non è ripassare argomenti isolati, ma allenare il ragionamento clinico richiesto all’esame: riconoscere il quadro, formulare diagnosi differenziale, scegliere gli esami, arrivare alla diagnosi più probabile e proporre la gestione iniziale.
 
 Le risorse principali sono:
 
 ```text
-assets/topics.yaml
-scripts/select_topic.py
+assets/topics.toml
+scripts/select_case.py
 scripts/update_history.py
-scripts/parse_topics.py
 ```
+
+Nota tecnica: esegui sempre gli script con `uv run`. Se in futuro servono dipendenze, aggiungile al progetto con `uv add <package>`.
 
 ## Struttura logica dello skill
 
-Il file `topics.yaml` deve essere organizzato per:
+Il file `topics.toml` deve essere organizzato come una lista di casi:
 
-```yaml
-topics:
-  - name: "Cardiologia"
-    cases:
-      - id: "cardio_01"
-        title: "Dolore toracico con diaforesi"
-        diagnosis: "Sindrome coronarica acuta"
-        subtopics:
-          - "STEMI"
-          - "NSTEMI"
-          - "Pericardite"
-          - "Tamponamento cardiaco"
+```toml
+[[cases]]
+number = 1
+section = "Cardiologia"
+title = "Dolore toracico con diaforesi"
+objectives = [
+  "Sindrome coronarica acuta",
+  "Diagnosi differenziale del dolore toracico",
+]
 ```
 
 Ogni sessione parte da un **caso clinico**, non da un singolo argomento.
@@ -45,21 +43,20 @@ Ogni sessione parte da un **caso clinico**, non da un singolo argomento.
 
 ## 1. Selezione del caso clinico
 
-Quando l’utente chiede di studiare, fare pratica o simulare l’esame, esegui:
+Quando l’utente chiede di studiare, fare pratica o simulare l’esame, esegui dalla root della skill:
 
 ```bash
-python3 scripts/select_topic.py
+uv run scripts/select_case.py
 ```
 
-Leggi l’output JSON e usa questi campi:
+Leggi l’output JSON:
 
 ```json
 {
-  "topic": "...",
   "case_id": "...",
   "case_title": "...",
-  "diagnosis": "...",
-  "subtopics": [...],
+  "section": "...",
+  "objectives": [...],
   "reason": "..."
 }
 ```
@@ -85,10 +82,9 @@ Poi chiedi se è pronto.
 
 Quando lo studente conferma, genera un caso realistico coerente con:
 
-* `topic`
+* `section`
 * `case_title`
-* `diagnosis`
-* `subtopics`
+* `objectives`
 
 Il caso deve contenere solo le informazioni iniziali necessarie, come in un esame orale o scritto:
 
@@ -104,22 +100,22 @@ Non rivelare subito la diagnosi.
 
 ---
 
-## 3. Domande progressive: 10 domande
+## 3. Domande progressive
 
-Somministra **10 domande una alla volta**.
+Somministra circa **10 domande**, una alla volta. Puoi arrivare fino a **15 domande** solo se servono domande mirate per esplorare lacune importanti.
 
-Le domande devono seguire questa progressione generale:
+Progressione consigliata:
 
 1. Problema clinico principale.
 2. Diagnosi più probabile.
 3. Diagnosi differenziale.
 4. Dati clinici discriminanti.
 5. Esami iniziali.
-6. Interpretazione di laboratorio/imaging/ECG.
+6. Interpretazione di laboratorio, imaging o ECG.
 7. Criteri diagnostici o classificazione.
 8. Terapia iniziale.
 9. Complicanze o segni di gravità.
-10. Domanda integrativa adattiva sulle lacune emerse.
+10. Domande adattive sulle lacune emerse.
 
 Regole obbligatorie:
 
@@ -128,46 +124,42 @@ Regole obbligatorie:
 * non dire se la risposta è giusta o sbagliata;
 * dopo ogni risposta, passa alla successiva;
 * valuta internamente la risposta;
-* se lo studente sbaglia, usa le domande successive per esplorare la lacuna.
+* non dare suggerimenti nella formulazione della domanda;
+* se lo studente sbaglia, usa domande successive per esplorare la lacuna.
 
-Frase neutra dopo ogni risposta:
+Usa una frase neutra dopo ogni risposta, tipo:
 
-> Grazie per la risposta. Ecco la domanda successiva.
+> Grazie. Passiamo alla domanda successiva.
 
 ---
 
 ## 4. Valutazione interna
 
-Durante le 10 domande, valuta:
+Durante le domande, valuta:
 
 * accuratezza diagnostica;
-* capacità di ragionamento differenziale;
+* diagnosi differenziale;
 * scelta degli esami;
 * interpretazione dei dati;
 * priorità terapeutiche;
 * riconoscimento delle urgenze;
-* uso corretto della terminologia clinica.
+* terminologia clinica.
 
-Ogni risposta può valere:
+Punteggio:
 
 ```text
 1 punto = corretta
-0.5 punti = parziale
-0 punti = errata o insufficiente
+0 punti = parziale, errata o insufficiente
 ```
-
-Il punteggio finale deve essere convertito su 10.
 
 ---
 
 ## 5. Feedback finale
 
-Dopo la decima risposta, fornisci feedback strutturato.
-
-Formato obbligatorio:
+Alla fine, fornisci:
 
 ```text
-Risultato: X/10
+Risultato: <Correct answers>/<Total questions>
 
 Punti forti:
 ...
@@ -179,13 +171,7 @@ Concetti da ripassare:
 ...
 ```
 
-Il feedback deve essere:
-
-* clinico;
-* semplice da seguire;
-* profondo;
-* orientato all’esame;
-* senza frasi generiche.
+Il feedback deve essere clinico, chiaro, profondo e orientato all’esame. Quando pertinente, integra riferimenti a ESC, GOLD, GINA, KDIGO, EASL, EULAR, IDSA.
 
 ---
 
@@ -194,22 +180,21 @@ Il feedback deve essere:
 Al termine, esegui:
 
 ```bash
-python3 scripts/update_history.py \
-  --topic "<Topic>" \
-  --subtopic "<Case ID>" \
-  --case-id "<Case ID>" \
-  --case-title "<Case title>" \
-  --diagnosis "<Diagnosis>" \
-  --score <Score> \
-  --total 10 \
-  --incorrect-concepts "<Concetto1>, <Concetto2>, <Concetto3>" \
-  --reasoning-feedback "<Feedback sintetico>"
+uv run scripts/update_history.py \
+  --case-code "<Case ID>" \
+  --correct <Correct answers> \
+  --total <Total questions> \
+  --incorrect-concepts "<Concetto1>, <Concetto2>, <Concetto3>"
 ```
 
 Se non ci sono errori:
 
 ```bash
---incorrect-concepts ""
+uv run scripts/update_history.py \
+  --case-code "<Case ID>" \
+  --correct <Correct answers> \
+  --total <Total questions> \
+  --incorrect-concepts ""
 ```
 
 Conferma allo studente che i progressi sono stati salvati.
@@ -224,4 +209,4 @@ Conferma allo studente che i progressi sono stati salvati.
 * Il centro della sessione è il **ragionamento diagnostico**.
 * Non rivelare la diagnosi prima del feedback finale.
 * Usa terminologia medica corretta.
-* Integra criteri e linee guida: ESC, GOLD, GINA, KDIGO, EASL, EULAR, IDSA.
+
