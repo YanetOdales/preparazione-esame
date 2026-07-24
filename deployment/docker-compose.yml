@@ -1,0 +1,50 @@
+services:
+  opencode:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    image: opencode-telegram-stack:latest
+    container_name: opencode
+    restart: unless-stopped
+    env_file: .env
+    entrypoint: ["/usr/local/bin/entrypoint-opencode.sh"]
+    environment:
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY}
+      OPENCODE_MODEL_ID: ${OPENCODE_MODEL_ID}
+      EXAM_RESULTS_PATH: ${EXAM_RESULTS_PATH}
+    volumes:
+      - ${HOST_OPENCODE_ROOT_DIR}:/root
+      - ${HOST_AGENTS_DIR}:/root/.agents
+      - ${HOST_OPENCODE_WORKSPACE_DIR}:/workspace
+      - ${HOST_RESULTS_DIR}:/data/esami
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:4096/"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+    expose:
+      - "4096"
+
+  bot:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    image: opencode-telegram-stack:latest
+    container_name: opencode-telegram-bot
+    restart: unless-stopped
+    env_file: .env
+    entrypoint: ["/usr/local/bin/entrypoint-bot.sh"]
+    environment:
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}
+      TELEGRAM_ALLOWED_USER_ID: ${TELEGRAM_ALLOWED_USER_ID}
+      OPENCODE_API_URL: ${OPENCODE_API_URL}
+      OPENCODE_MODEL_PROVIDER: ${OPENCODE_MODEL_PROVIDER}
+      OPENCODE_MODEL_ID: ${OPENCODE_MODEL_ID}
+      BOT_LOCALE: ${TELEGRAM_BOT_LOCALE}
+    depends_on:
+      opencode:
+        condition: service_healthy
+    volumes:
+      - ${HOST_TELEGRAM_DATA_DIR}:/root
+

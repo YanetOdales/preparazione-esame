@@ -1,1 +1,2 @@
-data/
+deployment/.env
+deployment/data/

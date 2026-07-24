@@ -13,7 +13,7 @@ Case = dict[str, Any]
 Cases = dict[str, Case]
 Scores = dict[str, list[int]]
 
-DEFAULT_DATA_DIR = "/Users/yanetodales/Documents/esame medicina interna/data"
+DEFAULT_DATA_DIR = "/data/esami"
 
 REASONS = {
     "unattempted": "This case has not been attempted yet.",
@@ -86,7 +86,8 @@ def select_case(cases: Cases, scores: Scores) -> dict[str, Any]:
 
 def main() -> None:
     root = Path(__file__).resolve().parent.parent
-    data_dir = Path(os.environ.get("STUDY_DATA_DIR", DEFAULT_DATA_DIR))
+    data_dir = Path(os.environ.get("EXAM_RESULTS_PATH", DEFAULT_DATA_DIR))
+    data_dir.mkdir(parents=True, exist_ok=True)
 
     cases = load_cases(root / "assets" / "topics.toml")
     scores = build_scores(read_json(data_dir / "studio_history.json"))

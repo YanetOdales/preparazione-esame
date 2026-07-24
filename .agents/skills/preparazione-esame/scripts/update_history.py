@@ -10,7 +10,7 @@ from typing import Any
 
 Attempt = dict[str, Any]
 
-DEFAULT_DATA_DIR = "/Users/yanetodales/Documents/esame medicina interna/data"
+DEFAULT_DATA_DIR = "/data/esami"
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -56,7 +56,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
 
-    data_dir = Path(os.environ.get("STUDY_DATA_DIR", DEFAULT_DATA_DIR))
+    data_dir = Path(os.environ.get("EXAM_RESULTS_PATH", DEFAULT_DATA_DIR))
     data_dir.mkdir(parents=True, exist_ok=True)
 
     history_file = data_dir / "studio_history.json"
